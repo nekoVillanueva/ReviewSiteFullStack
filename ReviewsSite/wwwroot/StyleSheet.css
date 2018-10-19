@@ -1,0 +1,16 @@
+﻿body {
+    background-image: url(images/balenci.jpg);
+    background-position:center;/*CSS Styling*/
+    background-size:cover;
+    background-repeat:no-repeat;
+    
+    font: bold 35px normal;
+
+}
+/*.Details{
+    background-image: url(@Model.ImgUrl);//Jenn tried to assist but calling ImgUrl would not work for @ModelUrl
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font: bold 35px normal;
+}*/

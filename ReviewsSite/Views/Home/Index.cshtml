@@ -1,0 +1,26 @@
+﻿@model IEnumerable<ReviewsSite.Models.Review>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+</head>
+<body class="Index">
+    <h1>Shoe Reviews</h1>
+    <p>PITY THE MEN’S DRESS SHOE, once an inescapable sight in Milan.
+    Whether we’re talking about pointy-toed Ferragamo loafers or hand-painted brogues from an artisan outside of town whose workshop’s 
+    location a Milanese gent would guard as closely as his grandmother’s bolognese recipe, formal men’s shoes used to rule the streets—but no longer.
+    Along the cobblestone corridors of Italy’s second-largest city, sneakers now abound, from the simple
+   (Adidas Stan Smiths) to the sublime (rare Nike s) to the ridiculous (the pervasive Triple S “ugly sneaker” from Balenciaga).Here are a few reviews of common sneakers you will see.</p>
+    @foreach(var review in Model)
+    {
+        <div><a href="/Home/Details/@review.Id">@review.title</a></div>
+    }
+</body>
+</html>
