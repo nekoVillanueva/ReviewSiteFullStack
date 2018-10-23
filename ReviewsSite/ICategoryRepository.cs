@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace ReviewsSite
 {
-   public interface IReviewRepository
+    public interface ICategoryRepository
     {
-       IEnumerable<Review> GetAll();
-        Review FindById(int id);
+       
+            IEnumerable<Category> GetAll();
+            Category FindById(int id);
+        
+
     }
 }

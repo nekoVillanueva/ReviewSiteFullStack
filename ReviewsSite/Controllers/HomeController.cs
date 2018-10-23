@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ReviewsSite.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace ReviewsSite.Controllers
         public HomeController(IReviewRepository reviewRepo)
         {
             this.reviewRepo = reviewRepo;
+
         }
 
         public ViewResult Index()
@@ -28,4 +30,6 @@ namespace ReviewsSite.Controllers
 
         }
     }
+    
+
 }

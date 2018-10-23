@@ -1,4 +1,16 @@
-﻿body {
+﻿* {
+    font-family: sans-serif;
+    line-height: 1.618em;
+    
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    margin-top: 3em;
+    font-size: 16px;
+}
+body {
     background-image: url(images/balenci.jpg);
     background-position:center;/*CSS Styling*/
     background-size:cover;
@@ -7,6 +19,35 @@
     font: bold 35px normal;
 
 }
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    background:#f81c1c;
+}
+    nav:hover {
+
+    background: #00a1be;
+}
+.Shoes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 1em;
+}
+.Shoes article {
+    background: #ccc;
+    padding: 1em;
+}
+ .Shoes article img {
+        width: 100%;
+        border: 1px solid #000;
+    }
+
 /*.Details{
     background-image: url(@Model.ImgUrl);//Jenn tried to assist but calling ImgUrl would not work for @ModelUrl
     background-position: center;

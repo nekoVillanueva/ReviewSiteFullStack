@@ -1,0 +1,21 @@
+﻿@model IEnumerable<ReviewsSite.Models.Category>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cats of the Migra</title>
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    @foreach (var category in Model)
+        {
+            <div><a href="/Home/Details/@category.Id">@category.Type</a></div>
+        }
+
+</body>
+</html>
