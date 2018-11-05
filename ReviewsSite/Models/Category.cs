@@ -11,4 +11,5 @@ namespace ReviewsSite.Models
         public string Type { get; set; }
         public virtual List<Review> Reviews { get; set; }
     }
+
 }

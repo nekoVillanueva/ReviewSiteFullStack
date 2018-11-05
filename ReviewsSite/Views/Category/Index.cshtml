@@ -12,9 +12,10 @@
     <link href="~/StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
+    @*needs to not be linked to reviews but category instead*@
     @foreach (var category in Model)
         {
-            <div><a href="/Home/Details/@category.Id">@category.Type</a></div>
+            <div><a href="/Category/Details/@category.Id">@category.Type</a></div>
         }
 
 </body>

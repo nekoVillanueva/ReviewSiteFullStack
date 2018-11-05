@@ -11,6 +11,10 @@
     <Compile Remove="Migrations\20181022004642_CatTitle.Designer.cs" />
     <Compile Remove="Migrations\20181022011712_CategoryType.cs" />
     <Compile Remove="Migrations\20181022011712_CategoryType.Designer.cs" />
+    <Compile Remove="Migrations\20181104180448_AddingSeedDataTag.cs" />
+    <Compile Remove="Migrations\20181104180448_AddingSeedDataTag.Designer.cs" />
+    <Compile Remove="Migrations\20181104211359_AddNewCommentData.cs" />
+    <Compile Remove="Migrations\20181104211359_AddNewCommentData.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

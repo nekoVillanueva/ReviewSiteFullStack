@@ -1,4 +1,4 @@
-﻿@model ReviewsSite.Models.Category
+@model ReviewsSite.Models.Tag
 @{
     Layout = null;
 }
@@ -11,17 +11,19 @@
     <title>Details</title>
     <link href="~/StyleSheet.css" rel="stylesheet" />
 
-@*need more info*@
 </head>
 <body>
+    <h1>@Model.Text</h1>
     <section>
-        @foreach (var review in Model.Reviews)
+        <ul>
+        @foreach (var reviewTag in Model.ReviewTags)
         {
-            <div>
-                <a href="/home/details/@review.Id">@review.Title</a>
-            </div>
+            <li>
+                <a href="/home/details/@reviewTag.ReviewId">@reviewTag.Review.Title</a>
+            </li>
         }
+        </ul>
     </section>
     <a href="/">Back</a>
 </body>
-</html>
+</html> 

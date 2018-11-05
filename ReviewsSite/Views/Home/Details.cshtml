@@ -10,18 +10,49 @@
     <meta name="viewport" content="width=device-width" />
     <title>Details</title>
     <link href="~/StyleSheet.css" rel="stylesheet" />
+    <script>
+        var reviewId = @Model.Id;
+    </script>
     
-    
+
 </head>
 <body>
     <h1>Details for @Model.Title</h1>
     <section>
         <h2>@Model.Category.Type</h2>
+        <div><a href="/Category/Details/@Model.Category.Id">@Model.Category.Type</a></div>
     </section>
     <section>
         <p>@Model.Content</p>
     </section>
+    <section>
+        <p>
+            This review is related to the following tags:
+        </p>
+        <h3>Tags</h3>
+        <ol id="tags-list"></ol>
+    </section>
+    <section>
+        <h3>New Tag</h3>
+        <textarea id="new-tag"></textarea>
+        <button id="save-tag">Save</button>
+    </section>
+    <section>
+        <h2>Comments</h2>
+        <ol id="comment-list"></ol>
+    </section>
+
+    <h3>New Comment</h3>
+    <textarea id="new-comment"></textarea>
+    <button id="save-comment">Save</button>
+
     <section><img src="@Model.ImgUrl" alt="I Tried"></section>
+
+    <a href="/">Back</a>
+
+    <script src="~/comment.js"></script>
+    <script src="~/tag.js"></script>
+
 </body>
-<a href="/">Back</a>
+
 </html>

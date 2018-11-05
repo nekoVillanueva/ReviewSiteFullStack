@@ -12,7 +12,6 @@ namespace ReviewsSite.Controllers
         public CategoryController(ICategoryRepository categoryRepo)
         {
             this.categoryRepo = categoryRepo;
-
         }
 
         public ViewResult Index()

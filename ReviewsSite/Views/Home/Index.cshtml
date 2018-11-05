@@ -26,41 +26,32 @@
     
     <section>
         <div class="Shoes">
+            @*need loop for links with @models*@
+            @foreach (var review in Model)
+            {
+                <article>
+                    <h3>@review.Title</h3>
+                
+                    <img src="@review.ImgUrl" />
+                    <p>
+                        <a href="/Home/Details/@review.Id">Click for Details </a>
+                        
+                    </p>
+                </article>
 
-            <article>
-                <h3>Nike</h3>
-                <img src="~/images/NikeAirMax.jpg">
-                <p>
-                    <a href="/Category/Details/1">Running Shoe</a>
-                </p>
-            </article>
-            <article>
-                <h3>Adidas</h3>
-                <img src="~/images/AdidasUltraboost.jpg">
-                <p>
-                    <a href="/Category/Details/2">Casual</a>
-                </p>
-            </article>
-            <article>
-                <h3>Jordans</h3>
-                <img src="~/images/AirJordanRetro.jpg">
-                <p>
-                  <a href="/Category/Details/3">Basketball</a>
-                </p>
-            </article>
+            }
+
+            
+
         </div>
     </section>
-            @*@foreach (var review in Model)
-            {
-                <div><a href="/Home/Details/@review.Id">@review.Title</a></div>
-              }*@
-        
-        
-            <nav>
-                <a href="/Home/Details/1">Nike</a>
-                <a href="/Home/Details/2">Adidas</a>
-                <a href="/Home/Details/3">Jordans</a>   
-            </nav>
+    <nav>
+        <a href="/Home">Home</a>
+        <a href="/Category/">Categories</a>
+
+      
+    </nav>
+       
        
 </body>
 </html>

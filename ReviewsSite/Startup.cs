@@ -19,6 +19,8 @@ namespace ReviewsSite
             services.AddMvc();
             services.AddScoped<IReviewRepository, ReviewRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepo>();
+            services.AddScoped<ICommentRepository, CommentRepository>();
+            services.AddScoped<ITagRepository, TagRepository>();
             services.AddDbContext<Context>();
         }
 
@@ -29,14 +31,21 @@ namespace ReviewsSite
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseStaticFiles();//allows images files to be seen by html
-            app.UseMvc(routes =>
+            else
             {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-            });
+                app.UseHsts();
+            }
+            app.UseStaticFiles();
+            app.UseHttpsRedirection();
+            app.UseMvcWithDefaultRoute();
+
+            //app.UseStaticFiles();//allows images files to be seen by html
+            //app.UseMvc(routes =>
+            //{
+            //    routes.MapRoute(              //alternative to setting default route
+            //        name: "default",
+            //        template: "{controller=Home}/{action=Index}/{id?}");
+            //});
         }
     }
 }
